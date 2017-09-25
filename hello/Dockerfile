@@ -7,7 +7,7 @@ RUN apk update && \
 ENV CONTAINERPILOT_VER 3.0.0
 ENV CONTAINERPILOT /etc/containerpilot.json5
 
-RUN export CONTAINERPILOT_CHECKSUM=6da4a4ab3dd92d8fd009cdb81a4d4002a90c8b7c \
+RUN export CONTAINERPILOT_CHECKSUM=5c99ae9ede01e8fcb9b027b5b3cb0cfd8c0b8b88 \
     && curl -Lso /tmp/containerpilot.tar.gz \
          "https://github.com/joyent/containerpilot/releases/download/3.4.2/containerpilot-3.4.2.tar.gz" \
     && echo "${CONTAINERPILOT_CHECKSUM}  /tmp/containerpilot.tar.gz" | sha1sum -c \
